@@ -1,6 +1,6 @@
 # GDXray-retinanet
 
-This project applies [RetinaNet](https://arxiv.org/abs/1708.02002) to the [GDXray](http://dmery.ing.puc.cl/index.php/material/gdxray/) dataset, Castings group.
+This project applies the [RetinaNet](https://arxiv.org/abs/1708.02002) object detector to the [GDXray](http://dmery.ing.puc.cl/index.php/material/gdxray/) dataset, Castings group.
 
 A sampling of inital results show below. 
 Annotations bounding-boxes are <span style="color:green">*green*</span>, detections in <span style="color:blue">*blue*</span>.
