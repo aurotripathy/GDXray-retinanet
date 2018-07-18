@@ -2,25 +2,29 @@
 
 This project applies the [RetinaNet](https://arxiv.org/abs/1708.02002) object detector on the [GDXray](http://dmery.ing.puc.cl/index.php/material/gdxray/) dataset, Castings group.
 
-We use the default focal loss paramters of `alpha=0.25`, `gamma=2.0`
+We use the application's default Focal Loss hyper-paramters of `alpha=0.25`, and `gamma=2.0`
 
 ### Training
-'''
-./train.py --multi-gpu=3 --batch-size=3 --freeze-backbone --no-evaluation --steps=10000 --epochs=20 --snapshot-path xray3-snapshots csv ../\
-utils/annotations-with-negatives/train_annotations.csv ../utils/annotations/classes.csv
-'''
 
-#### Resume training from a snapshot (--snapshot)
+```
+./train.py --multi-gpu=3 --batch-size=3 --freeze-backbone \
+--no-evaluation --steps=10000 --epochs=20 --snapshot-path xray3-snapshots csv ../\
+utils/annotations-with-negatives/train_annotations.csv ../utils/annotations/classes.csv
+```
+
+### Resume training from a snapshot (--snapshot)
+```
 ./train.py --gpu=1 --freeze-backbone --no-evaluation --steps=10000 --epochs=5 --snapshot  xray3-snapshots/resnet50_csv_20.h5 --snapshot-pat\
 h xray4-snapshots csv ../utils/annotations-with-negatives/train_annotations.csv ../utils/annotations/classes.csv
+```
 
 ### Evaluate
+```
 ./evaluate.py --save-path results/ --max-detections=7 csv ../utils/annotations-with-negatives/test_annotations.csv ../utils/annotations-wit\
 h-negatives/classes.csv xray-snapshots/resnet50_csv_11.h5
+```
 
-
-
-
+### Initial Results
 A sampling of inital results show below. 
 
 Ground-truth bounding-boxes are in green, detections are in blue.
