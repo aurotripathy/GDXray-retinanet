@@ -14,17 +14,22 @@ utils/annotations-with-negatives/train_annotations.csv ../utils/annotations/clas
 
 ### Resume training from a snapshot (--snapshot)
 ```
-./train.py --gpu=1 --freeze-backbone --no-evaluation --steps=10000 --epochs=5 --snapshot  xray3-snapshots/resnet50_csv_20.h5 --snapshot-pat\
-h xray4-snapshots csv ../utils/annotations-with-negatives/train_annotations.csv ../utils/annotations/classes.csv
+./train.py --gpu=1 --freeze-backbone --no-evaluation --steps=10000 --epochs=5 \
+--snapshot  xray3-snapshots/resnet50_csv_20.h5 \
+--snapshot-path xray4-snapshots \
+csv ../utils/annotations-with-negatives/train_annotations.csv ../utils/annotations/classes.csv
 ```
 
 ### Evaluate
 ```
-./evaluate.py --save-path results/ --max-detections=7 csv ../utils/annotations-with-negatives/test_annotations.csv ../utils/annotations-wit\
-h-negatives/classes.csv xray-snapshots/resnet50_csv_11.h5
+./evaluate.py --save-path results/ --max-detections=7 \
+csv ../utils/annotations-with-negatives/test_annotations.csv \
+../utils/annotations-with-negatives/classes.csv xray-snapshots/resnet50_csv_11.h5
 ```
 
 ### Initial Results
+With the default Focal Loss hyperparamter settings, the mAP is 0.76
+
 A sampling of inital results show below. 
 
 Ground-truth bounding-boxes are in green, detections are in blue.
