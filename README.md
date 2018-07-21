@@ -3,7 +3,7 @@
 This project applies the [RetinaNet](https://arxiv.org/abs/1708.02002) object detector on the [GDXray](http://dmery.ing.puc.cl/index.php/material/gdxray/) dataset, Castings group.
 
 ### Reuse
-We entirely reuse the [Keras Retinanet Object Detection Framework](https://github.com/fizyr/keras-retinanet) and just apply the dataset are instructed.  
+We entirely reuse the [Keras Retinanet Object Detection Framework](https://github.com/fizyr/keras-retinanet) and just apply the dataset as instructed by the framework.  
 
 ### Configuration
 We use the frameworks's default Focal Loss hyper-paramters of `alpha=0.25`, and `gamma=2.0`
