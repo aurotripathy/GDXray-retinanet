@@ -1,6 +1,6 @@
 # GDXray-retinanet
 
-This project applies the [RetinaNet](https://arxiv.org/abs/1708.02002) object detector on the [GDXray](http://dmery.ing.puc.cl/index.php/material/gdxray/) dataset, Castings group.
+This project applies the [RetinaNet](https://arxiv.org/abs/1708.02002) object detector on the [GDXray](http://dmery.ing.puc.cl/index.php/material/gdxray/) [dataset](http://dmery.sitios.ing.uc.cl/images/GDXray/Castings.zip), Castings group.
 
 ### Reuse
 We entirely reuse the [Keras Retinanet Object Detection Framework](https://github.com/fizyr/keras-retinanet) and just apply the dataset as instructed by the framework.  
